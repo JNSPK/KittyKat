@@ -1,0 +1,16 @@
+{
+  "name": "kittykat",
+  "version": "1.0.0",
+  "description": "Little Catmagochi",
+  "main": "appFront.js",
+  "scripts": {
+    "start": "node apps/appFront.js",
+    "sass": "sass --watch D:/Projets/KittyKat/src/sass/style.scss:src/css/style.css"
+  },
+  "author": "Johan Nilsson",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@thatapicompany/thecatapi": "^1.0.2"
+  }
+}
