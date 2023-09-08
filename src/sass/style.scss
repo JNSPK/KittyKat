@@ -49,10 +49,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  max-width: 30rem;
+  max-width: 80%;
+  width: 30rem;
   height: 60%;
   gap: 1rem;
+
+  @include devices(tablet) {
+    min-width: 80%;
+  }
+  @include devices(mobile) {
+    min-width: 80%;
+  }
 }
 .generator {
   width: 15rem;
@@ -128,4 +135,20 @@ a {
 }
 a:visited {
   color: black;
+}
+
+@mixin devices($breakpoint) {
+  //the name of the mixin is devices
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 481px) {
+      @content;
+    }
+  }
 }
